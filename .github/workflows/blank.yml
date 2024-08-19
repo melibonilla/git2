@@ -44,9 +44,11 @@ jobs:
           echo "GitHub_REPOSITORY: $GITHUB_REPOSITORY"
           echo "Este es el valor de username: ${{env.username}}"
           echo "Este es el valor de password: ${{env.password}}"
+
       - name: "Mostrando valores solo si el usuario es correcto"
         run: |
           if [ $GITHUB_ACTOR == "melibonilla"]; then
             echo "El usuario es correcto"
           else
             echo "El usuario no es correcto"
+          fi
